@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UsersController;
 use Database\Seeders\AdminSeeder;
 use Illuminate\Support\Facades\Route;
@@ -45,3 +48,17 @@ Route::middleware('auth')->group(function()
 {
 Route::get('user/dashboard',[UsersController::class,'show_user_dashboard'])->name('user.dashboard');
 });
+
+// to show the add-category page
+Route::get('admin/addcategory',[DashboardController::class,'show_add_category'])->name('admin.add_category');
+
+Route::post('admin/storecategory',[CategoryController::class,'store_category'])->name('admin.store_category');
+
+// this is to show the category-show function one page per category
+Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
+
+// this is to show admin add-post section in admin dashbaord
+Route::get('admin/addpost',[PostController::class,'show_add_post'])->name('admin.show_add_post');
+
+// this is to show store_post 
+Route::post('admin/storepost',[PostController::class,'store_post'])->name('admin.store_post');

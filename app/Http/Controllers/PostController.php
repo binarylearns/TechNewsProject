@@ -17,7 +17,8 @@ class PostController extends Controller
 
     public function index()
     {
-        $post = Post::all();
+       
+        return view('welcome');
 
 
     }
@@ -40,15 +41,17 @@ class PostController extends Controller
         $validatedData['image'] = $path;
         $post = Post::create($validatedData);
         return redirect()->route('admin.show_add_post')->with('success','Post created successfully');
-        
-
-
-
-
-
-
+       
 
     }
+
+    public function show_post(Post $post)
+    {
+
+        return view('user.show-post', compact('post'));
+
+    }
+
 
 
 

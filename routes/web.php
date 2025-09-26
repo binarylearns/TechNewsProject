@@ -7,11 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UsersController;
 use Database\Seeders\AdminSeeder;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-
+Route::get('/', [PostController::class, 'index'])->name('home');
 
 //This is for showing admin_login_form
 Route::get('/admin/login',[AdminController::class,'show_admin_login_form'])->name('admin.login_form');
@@ -62,3 +58,7 @@ Route::get('admin/addpost',[PostController::class,'show_add_post'])->name('admin
 
 // this is to show store_post 
 Route::post('admin/storepost',[PostController::class,'store_post'])->name('admin.store_post');
+
+//this is to show individual post
+Route::get('/post/{post}', [PostController::class, 'show_post'])->name('post.show');
+

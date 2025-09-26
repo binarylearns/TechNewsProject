@@ -5,9 +5,9 @@
         <!-- Posts Section -->
         <div class="flex flex-col space-y-6">
             @foreach ($posts as $post)
-                <a href="#"
+                <a href="{{ route('post.show', $post) }}"
                     class="flex flex-col md:flex-row items-center bg-yellow-100 border border-yellow-300 rounded-lg shadow-md 
-                                                                                                                                                                                                   w-[700px] h-[250px] hover:bg-yellow-200 transition duration-200 overflow-hidden">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           w-[700px] h-[250px] hover:bg-yellow-200 transition duration-200 overflow-hidden">
 
                     <!-- Image -->
                     <img class="object-cover w-full md:w-48 h-full md:h-full md:rounded-l-lg"
@@ -20,23 +20,32 @@
                     </div>
                 </a>
             @endforeach
+
+
+
         </div>
+
 
         <!-- Author Card (only once, outside loop) -->
         <div
-            class="w-[250px] h-[300px] bg-white border border-gray-300 rounded-lg shadow-md p-4 flex flex-col items-center text-center">
+            class="w-[250px] h-[320px] bg-white border border-gray-300 rounded-lg shadow-md p-4 flex flex-col items-center text-center">
 
             <img src="{{ asset('storage/images/author.jpg') }}" alt="Author"
                 class="w-32 h-32 rounded-full object-cover mb-3">
 
             <h3 class="text-lg font-bold">Ishwor Adhikari</h3>
-            <p class="text-sm text-gray-600">Hey Guys Whats Up? My name is Ishwor Adhikari and I am Programmer and Founder
+            <p class="text-sm text-gray-600">Hey Guys Whats Up? My name is Ishwor Adhikari and I am Programmer and
+                Founder
                 of TechNewsProject</p>
             <a href="#" class="mt-3 text-blue-600 hover:underline">View Profile</a>
         </div>
 
 
 
+
     </div>
+
+
+
 
 @endsection

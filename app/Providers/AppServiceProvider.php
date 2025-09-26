@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Models\Category;
 use App\Models\Post;
+use Illuminate\Pagination\Paginator;
+
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+       
+
         // this is to access post
          View::composer('*', function ($view) {
         $view->with('posts', Post::all());

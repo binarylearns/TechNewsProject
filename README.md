@@ -1,12 +1,27 @@
-🧑‍💻 Full Stack Laravel + Tailwind CSS Project
+# 🧑‍💻 Laravel & Tailwind CSS Web Application
 
-A full-stack web application built using Laravel and Tailwind CSS, focused on clean design, smooth user experience, and efficient admin management.
-This project highlights my growing skills in backend and frontend integration with a focus on simplicity and usability.
+A web application built with **Laravel and Tailwind CSS**, combining server-side development with a clean, responsive user interface.
 
-✨ Features
-🏠 Clean & Minimal Home Screen
+The project focuses on building a simple and maintainable web experience, with a minimal homepage that presents author information through a thoughtfully styled layout.
 
-A simple, responsive homepage with author information and a neat design.
+## ✨ Features
+
+- 🏠 **Minimal Homepage** — A clean landing page featuring author information.
+- 📱 **Responsive Design** — A layout designed to adapt to different screen sizes.
+- 🎨 **Tailwind CSS Styling** — Utility-first styling for a consistent and maintainable interface.
+- ⚙️ **Laravel Integration** — Uses Laravel's web application structure and templating capabilities.
+
+## 🛠️ Tech Stack
+
+- **Backend:** PHP, Laravel
+- **Frontend:** HTML, Tailwind CSS, Blade templates.
+## 🎯 Project Purpose
+
+This project explores the integration of Laravel and Tailwind CSS to build a functional web interface while developing practical skills in backend development, frontend styling, and application structure.
+
+## 📌 Project Status
+
+A small web development project that can serve as a foundation for further improvements and additional features.
  <img width="1911" height="891" alt="image" src="https://github.com/user-attachments/assets/c18bd0f9-3354-46f5-b5e2-1317b31d377d" />
 
 
